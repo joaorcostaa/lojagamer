@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Jogos from './pages/Jogos'
 import Contato from './pages/Contato'
 import Login from './pages/Login'
-import Error from './pages/Error '
+import Error from './pages/Error'
 
 
 const App = () => {
