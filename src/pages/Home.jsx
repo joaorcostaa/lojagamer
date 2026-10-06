@@ -1,10 +1,29 @@
-
+import GameCard from "../components/GameCard"
+import ImagemJogo from '../assets/Imagem.jpg'
 
 const Home = () => {
+  const games=[
+    { id:1,titulo:"Jogo-01",preco: "200,00", imagem: ImagemJogo},
+    { id:2,titulo:"Jogo-02",preco: "300,00", imagem: ImagemJogo},
+    { id:3,titulo:"Jogo-03",preco: "400,00", imagem: ImagemJogo},
+    { id:4,titulo:"Jogo-04",preco: "500,00", imagem: ImagemJogo},
+  ];
   return (
-    <>
+    <main className="px-[5%] mt-10 mb-16 grow ">
+      <h2 className="titulo text-3xl text-[#95ff00]">JOGOS EM DESTAQUES</h2>
+      <section className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6">{games.map((jogo)=>(
+        <GameCard
+         key={jogo.id}
+         titulo={jogo.titulo}
+         preco={jogo.preco}
+         imagem={jogo.imagem}
+        />
+
+      ))}
+
+      </section>
       
-    </>
+    </main>
   )
 }
 
